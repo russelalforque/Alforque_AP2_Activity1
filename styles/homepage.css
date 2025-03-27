@@ -278,7 +278,6 @@ a:hover{
     bottom: 0;
 }
 #footer_text{
-    border: black solid 1px;
     display: flex;
     align-items: center;
     justify-content: center;

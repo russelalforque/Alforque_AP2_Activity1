@@ -1,84 +1,66 @@
-<!-- This is a file that I use to test out the possibilities of formatting with html and css -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Only See More Button (Symbol)</title>
+    <style>
+        /* Hide the checkbox */
+        .see-more {
+            display: none;
+        }
 
-<div class="box1">Box 1 (Normal Flow)</div>
-<div class="box2">Box 2 (Fixed Overlapping)</div>
-<div class="box3">Box 3 (Below Box 1)</div>
+        /* Hide the extra text initially */
+        .hidden-text {
+            display: none;
+        }
 
-<style>
-  .box1 {
-    width: 200px;
-    height: 200px;
-    background: lightblue;
-    margin-bottom: 20px;
-  }
+        /* Show hidden text when checkbox is checked */
+        .see-more:checked ~ .hidden-text {
+            display: inline;
+        }
 
-  .box2 {
-    width: 100px;
-    height: 100px;
-    background: red;
-    position: fixed;
-    top: 20px;
-    left: 20px;
-  }
+        /* Change the button symbol when checked */
+        .see-more:checked ~ .see-more-label::after {
+            content: " ▲"; /* Up arrow (collapse) */
+        }
 
-  .box3 {
-    width: 200px;
-    height: 200px;
-    background: lightgreen;
-  }
-</style>
+        /* Style the label to look like a round button */
+        .see-more-label {
+            display: inline-block;
+            background-color: #007BFF;
+            color: white;
+            font-size: 16px;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
 
-<div class="leaf"></div>
+        /* Default symbol */
+        .see-more-label::after {
+            content: " ▼"; /* Down arrow (expand) */
+            font-weight: bold;
+        }
 
-<style>
-  .leaf {
-    width: 150px;
-    height: 80px;
-    background: green;
-    border-radius: 80% 10% 80% 10%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-</style>
+        /* Hover effect */
+        .see-more-label:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
 
-<iframe
-  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31410.137801576173!2d123.78463337431643!3d10.240018600000006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33a99d004f6c1c8f%3A0x5481a3712742cea9!2sBalay%20sa%20Gwapo%20ug%20Gwapa!5e0!3m2!1sen!2sph!4v1742888947520!5m2!1sen!2sph"
-  width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-  referrerpolicy="no-referrer-when-downgrade">
-  address
-</iframe>
+  <h1>dueiahr</h1>
+    <p>
+        This is a short preview.
+        <input type="checkbox" class="see-more" id="toggle-text">
+        <span class="hidden-text"> Here is the rest of the text that was hidden!</span>
+        <label for="toggle-text" class="see-more-label"></label>
+    </p>
 
-<iframe src="https://github.com/russelalforque"></iframe>
-
-<svg xmlns="http://www.w3.org/2000/svg" width="200" height="681" viewBox="0 0 1024 681" fill="none">
-  <g filter="url(#filter0_d_13_192)">
-    <ellipse cx="530.009" cy="256.704" rx="577.007" ry="378.039" transform="rotate(-13.6711 530.009 256.704)"
-      fill="url(#paint0_linear_13_192)" />
-  </g>
-  <defs>
-    <filter id="filter0_d_13_192" x="-65.8094" y="-159.23" width="1191.64" height="839.867" filterUnits="userSpaceOnUse"
-      color-interpolation-filters="sRGB">
-      <feFlood flood-opacity="0" result="BackgroundImageFix" />
-      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-        result="hardAlpha" />
-      <feMorphology radius="13" operator="dilate" in="SourceAlpha" result="effect1_dropShadow_13_192" />
-      <feOffset dy="4" />
-      <feGaussianBlur stdDeviation="7.5" />
-      <feComposite in2="hardAlpha" operator="out" />
-      <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" />
-      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_13_192" />
-      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_13_192" result="shape" />
-    </filter>
-    <linearGradient id="paint0_linear_13_192" x1="530.009" y1="-121.335" x2="530.009" y2="634.743"
-      gradientUnits="userSpaceOnUse">
-      <stop stop-color="#1CA4E9" />
-      <stop offset="0.9999" stop-color="#A4DFFD" />
-    </linearGradient>
-  </defs>
-</svg>
-
-
-
-<button><a href="https://example.com">Go to Example
-  </a></button>
+</body>
+</html>

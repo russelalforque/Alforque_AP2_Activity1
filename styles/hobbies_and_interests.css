@@ -1,0 +1,152 @@
+/* Ensure that page does not scroll horizontally;
+    gicalculate nga ang size is absolute,
+    including padding and margins and the like */
+* {
+    box-sizing: border-box;
+}
+
+/* set background for whole webpage */
+body {
+    background-color: #7BC1E4;
+    margin: 0;
+}
+
+/* Margins: header and footer*/
+.margins {
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+    align-items: center;
+    background: #5465AB;
+}
+
+/* The designs on the margins */
+.margins_element {
+    height: 60%;
+    width: auto;
+}
+
+#page_title_container{
+    height: fit-content;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 0;
+}
+#page_title{
+    color: #1d1d1d;
+    width: max-content;
+    text-align: center;
+    padding: 3% 5%;
+    border-radius: 50px;
+    background-color: #F8F8F8;
+}
+
+#page_buttons {
+    width: 50%;
+    height: 90%;
+    border: none;
+}
+
+.header_overview{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.text{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    width: max-content;
+}
+
+.page_button{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    color: #1d1d1d;
+    text-decoration: none;
+    padding: 10px 13px;
+    border-radius: 30px;
+    background-color: #F8F8F8;
+}
+
+a:hover {
+    background-color: cornsilk;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.content_container{
+    padding: 2% 2%;
+    border-radius: 5%;
+}
+
+.design_elements {
+    position: absolute;
+    height: auto;
+}
+
+#footer {
+    position: relative;
+    bottom: 0;
+}
+
+#footer_text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px;
+    background-color: #F8F8F8;
+    height: 60%;
+    width: 80%;
+}
+
+#outer_container{
+    box-sizing: border-box;
+    display: flex;
+    min-height: 100vh;
+    height: auto;
+    width: 100%;
+    padding: 2%;
+    justify-content: center;
+}
+
+#main_content{
+    width: 68%;
+    background-color: #E1E15C;
+}
+
+#container_overview{
+    border-radius: 0px;
+    background-color: #5465AB;
+}
+
+.icons{
+    display: flex;
+    flex-direction: row;
+    gap: 10%;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+}
+
+.icon{
+    width: 30%;
+
+}
+
+.individual_container{
+    display: flex;
+    gap: 7%;
+    width: fit-content;
+}
+.inner_content_container, h2, li, ol, ul{
+    width: fit-content;
+}
+
+#group_affiliations{
+    width: 80%;
+}
