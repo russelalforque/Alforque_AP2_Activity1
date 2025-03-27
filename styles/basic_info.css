@@ -1,0 +1,171 @@
+/* Ensure that page does not scroll horizontally;
+    gicalculate nga ang size is absolute,
+    including padding and margins and the like */
+* {
+    box-sizing: border-box;
+}
+
+/* set background for whole webpage */
+body {
+    background-color: #7BC1E4;
+    margin: 0;
+}
+
+/* Margins: header and footer*/
+.margins {
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+    align-items: center;
+    background: #5465AB;
+}
+
+/* The designs on the margins */
+.margins_element {
+    height: 60%;
+    width: auto;
+}
+
+#page_buttons {
+    width: 50%;
+    height: 90%;
+    border: none;
+}
+
+a {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    color: #1d1d1d;
+    text-decoration: none;
+    padding: 10px 13px;
+    border-radius: 30px;
+    background-color: #F8F8F8;
+}
+
+a:hover {
+    background-color: cornsilk;
+}
+
+.design_elements {
+    position: absolute;
+    height: auto;
+}
+
+#left_cloud {
+    width: 30%;
+    top: -8%;
+    left: -10%;
+}
+
+#middle_cloud {
+    width: 15%;
+    top: 2%;
+    left: 47%;
+}
+
+#right_cloud {
+    width: 30%;
+    top: -18%;
+    right: -13%;
+}
+
+#flower1 {
+    width: 8%;
+    top: 60%;
+    left: 2%;
+    rotate: 160deg;
+}
+
+#flower2 {
+    width: 5%;
+    top: 6%;
+    left: 28%;
+}
+
+#flower3 {
+    width: 6%;
+    top: 23%;
+    left: 85%;
+    rotate: 90deg;
+}
+
+#star1 {
+    width: 6%;
+    top: 7%;
+    left: 70%;
+}
+
+#star2 {
+    width: 5%;
+    top: 40%;
+    left: 5%;
+    rotate: 20deg;
+}
+
+#star3 {
+    width: 6%;
+    top: 58%;
+    left: 92%;
+    rotate: -30deg;
+}
+
+.container{
+    width: 100%;
+}
+.info_label, .info_container {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0% 1%;
+    height: fit-content;
+    width: fit-content;
+    padding: 0;
+    /* border: black solid 1px; */
+}
+.info_label{
+    font-weight: bold;
+    font-size: small;
+}
+.info_container{
+    background-color: #F8F8F8;
+    padding: 5px 20px;
+    border-radius: 15px;
+}
+.group_container{
+    width: max-content;
+    height: max-content;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    white-space: nowrap;
+}
+#grouped_groups{
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 7%;
+}
+#group_address{
+    width: 100%;
+    padding: 20px 8%;
+}
+#visual_address{
+    height: auto;
+    width: 100%;
+}
+#footer {
+    position: relative;
+    bottom: 0;
+}
+
+#footer_text {
+    border: black solid 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px;
+    background-color: #F8F8F8;
+    height: 60%;
+    width: 80%;
+}
