@@ -20,10 +20,10 @@
         <img src="images/flower.png" alt="flower" class="margins_element" id="header_flower" />
 
         <div class="margins" id="page_buttons">
-            <a href="index.html">Home</a>
-            <a href="basic_info.html">Basic Info</a>
-            <a href="hobbies_and_interests.html">Hobbies & Interests</a>
-            <a href="contact.html">Contact</a>
+            <a href="index.html" class="page_buttons">Home</a>
+            <a href="basic_info.html" class="page_buttons">Basic Info</a>
+            <a href="hobbies_and_interests.html" class="page_buttons">Hobbies & Interests</a>
+            <a href="contact.html" class="page_buttons">Contact</a>
         </div>
 
         <img src="images/flower.png" alt="flower" class="margins_element" id="header_flower" />
@@ -36,19 +36,61 @@
     <div class="container" id="main_container">
         <table border="1">
             <tr>
-                <th class="text" id="gmail">Platform</th>
-                <th class="text" id="gmail">Link/Username</th>
-                <th class="text" id="gmail">Copy!</th>
+                <th class="text" id="platform">Platform</th>
+                <th class="text" id="handle">Link/Username</th>
+                <th class="text" id="buttons">Copy!</th>
+            </tr>
+
             <tr>
                 <td>
-                    <img src="icons/gmail.png" alt="gmail_icon" class="icon" id="gmail.icon"/>
-                    <h1 class="text" id="gmail">GMAIL</h1>
+                    <div class="group_platform" id="gmail">
+                        <img src="icons/gmail.png" alt="gmail_icon" class="icon" id="gmail_icon" />
+                        <h3 class="text" id="gmail">GMAIL</h3>
+                    </div>
                 </td>
                 <td>
-                    <h3 class="text" id="gmail">alforquerusselbenedictf@gmail.com</h3>
+                    <h3 class="text" id="gmail_handle">alforquerusselbenedictf@gmail.com</h3>
                 </td>
-                <td><button>Copy Email!</button></td>
+                <td><button onclick="copyText(this, 'gmail_handle')">Copy Email!</button></td>
             </tr>
+
+            <tr>
+                <td>
+                    <div class="group_platform" id="facebook">
+                        <img src="icons/facebook.jpg" alt="facebook_icon" class="icon" id="facebook_icon" />
+                        <h3 class="text" id="gmail">FACEBOOK</h3>
+                    </div>
+                </td>
+                <td>
+                    <h3 class="text" id="gmail"><a href="https://www.facebook.com/AlforqueR" target="_blank" class="text" id="facebook_handle">@AlforqueR</a></h3>
+                </td>
+                <td><button onclick="copyText(this, 'facebook_handle')">Copy Facebook!</button></td>
+            </tr>
+
+            <tr>
+                <td>
+                    <div class="group_platform" id="github">
+                        <img src="icons/github.png" alt="github_icon" class="icon" id="github_icon" />
+                        <h3 class="text" id="github">GITHUB</h3>
+                    </div>
+                </td>
+                <td>
+                    <h3 class="text" id="github_handle"><a href="https://github.com/russelalforque" target="_blank" class="text" id="github_handle">@russelalforque</a></h3>
+                </td>
+                <td><button onclick="copyText(this, 'github_handle')">Copy Github!</button></td>
+            </tr>
+
+            <tr>
+                <td>
+                    <div class="group_platform" id="linkedin">
+                        <img src="icons/linkedin.png" alt="linkedin_icon" class="icon" id="linkedin_icon" />
+                        <h3 class="text" id="linkedin">LINKEDIN</h3>
+                    </div>
+                </td>
+                <td>
+                    <h3 class="text" id="linkedin_handle"><a href="https://www.linkedin.com/in/russelalforque" target="_blank" class="text" id="linkedin_handle">@russelalforque</a></h3>
+                </td>
+                <td><button onclick="copyText(this, 'linkedin_handle')">Copy LinkedIn!</button></td>
             </tr>
         </table>
     </div>
@@ -62,7 +104,7 @@
 
         <div class="margins" id="page_buttons">
             <h5 class="text" id="footer_text">Russel Benedict F. Alforque&nbsp;&nbsp;&nbsp;&nbsp;BSIS
-                2-1&nbsp;&nbsp;&nbsp;&nbsp;AP 2-Activity 1</h3>
+                2-1&nbsp;&nbsp;&nbsp;&nbsp;AP 2-Activity 1</h5>
         </div>
 
         <img src="images/butterfly.png" alt="butterfly" class="margins_element" id="footer_butterfly" />
@@ -70,6 +112,8 @@
         <img src="images/butterfly.png" alt="butterfly" class="margins_element" id="footer_butterfly" />
 
     </div>
+
+    <script src="javascript/script.js"></script>
 </body>
 
 </html>

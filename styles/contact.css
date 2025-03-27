@@ -34,7 +34,7 @@ body {
     border: none;
 }
 
-a {
+.page_buttons{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 12px;
     font-weight: bold;
@@ -50,35 +50,14 @@ a:hover {
 }
 
 .container {
+    display: flex;
     position: relative;
     width: auto;
     height: 100vh;
     overflow: hidden;
     margin: 0;
     z-index: 1;
-}
-
-.polaroid {
-    box-sizing: border-box;
-    height: 65%;
-    width: 25%;
-    border-radius: 10px;
-    background-color: #F8F8F8;
-    border: black solid 1px;
-    display: flex;
-    padding: 2% 2% 5% 2%;
-    position: absolute;
-    top: 20%;
-    left: 13%;
-    z-index: 2;
-}
-
-#formal_picture {
-    border-radius: 10px;
-    height: 90%;
-    width: 100%;
-    padding: 0;
-    position: static;
+    padding: 2% 7%;
 }
 
 .design_elements {
@@ -86,66 +65,8 @@ a:hover {
     height: auto;
 }
 
-#left_cloud {
-    width: 30%;
-    top: -8%;
-    left: -10%;
-}
-
-#middle_cloud {
-    width: 15%;
-    top: 2%;
-    left: 47%;
-}
-
-#right_cloud {
-    width: 30%;
-    top: -18%;
-    right: -13%;
-}
-
-#flower1 {
-    width: 8%;
-    top: 60%;
-    left: 2%;
-    rotate: 160deg;
-}
-
-#flower2 {
-    width: 5%;
-    top: 6%;
-    left: 28%;
-}
-
-#flower3 {
-    width: 6%;
-    top: 23%;
-    left: 85%;
-    rotate: 90deg;
-}
-
-#star1 {
-    width: 6%;
-    top: 7%;
-    left: 70%;
-}
-
-#star2 {
-    width: 5%;
-    top: 40%;
-    left: 5%;
-    rotate: 20deg;
-}
-
-#star3 {
-    width: 6%;
-    top: 58%;
-    left: 92%;
-    rotate: -30deg;
-}
-
 #footer {
-    position: absolute;
+    position: relative;
     bottom: 0;
 }
 
@@ -159,17 +80,42 @@ a:hover {
     height: 60%;
     width: 80%;
 }
-.container{
-    padding: 20px;
-}
-.text{
+
+.text {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     margin: 0% 1%;
-    height:fit-content;
+    height: fit-content;
     width: fit-content;
     padding: 0;
     /* border: black solid 1px; */
 }
-.icon{
-    width: 10%;
+
+.icon {
+    width: 30%;
+    height: 100%
+}.group_platform {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; /* Adds spacing between icon and text */
+    width: 100%;
+}
+
+table {
+    width: 100%; /* Ensure table spans full width */
+    table-layout: fixed; /* Prevents columns from expanding beyond content */
+}
+
+td {
+    vertical-align: middle; /* Ensures text stays in the middle */
+    text-align: center; /* Centers content horizontally */
+}
+
+/* Set specific widths for each column */
+th#platform, td:nth-child(1) { height: 20%; width: 20%; } /* Platform column */
+th#handle, td:nth-child(2) { height: 20%; width: 50%; } /* Email/Username column */
+th#buttons, td:nth-child(3) { height: 20%; width: 30%; } Button column
+
+*{
+    border: black solid;
 }

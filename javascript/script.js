@@ -1,6 +1,9 @@
-document.getElementById("copyBtn").addEventListener("click", function() {
-    let text = document.getElementById("text").innerText;
-    navigator.clipboard.writeText(text).then(() => {
-        alert("Copied: " + text);
+function copyText(button, elementId) {
+    let textToCopy = document.getElementById(elementId).innerText;
+    
+    navigator.clipboard.writeText(textToCopy).then(() => {
+        alert("Copied: " + textToCopy);
+    }).catch(err => {
+        console.error("Error copying text: ", err);
     });
-});
+}
